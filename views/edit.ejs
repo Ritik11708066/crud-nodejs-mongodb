@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body style="background-color: rgb(116, 201, 127);">
+    <div class="wrapper">
+        <div class="ui menu">
+            <div class="ui container">
+                <div class="header item">
+                    <a href="/" class="link">Home</a>
+                </div>
+                <a href="" class="item">
+                    About us
+                </a>
+                <a href="" class="item">
+                    Jobs
+                </a>
+                <a href="" class="item">
+                    Locations
+                </a>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="ui container">
+            <form action="/edit/<%= clubs._id%>" class="ui form" method="POST">
+                <div class="ui three fields">
+                    <div class="field">
+                        <label for="Club" class="ui header black">Enter the club name</label>
+                        <input type="text" name="club" value="<%= clubs.name %>">
+
+                        <label for="players" class="ui header black">Players name</label>
+                        <input type="text" name="players" value="<%= clubs.players %>">
+
+                        <label for="coach" class="ui header black">Enter the coach name</label>
+                        <input type="text" name="coach" value="<%= clubs.coach %>">
+                    </div>
+                </div>
+
+                <div class="fluid field">
+                    <input type="submit" value="EDIT" class="ui button black fluid">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
